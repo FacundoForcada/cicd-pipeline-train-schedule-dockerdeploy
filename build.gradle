@@ -5,8 +5,8 @@ plugins {
 
 node {
     download = true
-    version = "18.18.0"       // You can change this to match your app's requirements
-    npmVersion = "9.8.1"      // Compatible npm version
+    version = '16.20.2'
+    npmVersion = '8.19.4'
 }
 
 // Declare a build task
