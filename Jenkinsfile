@@ -1,22 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Clean Caches') {
-            steps {
-                echo 'Cleaning Gradle and npm caches'
-                sh '''
-                    ./gradlew --stop || true
-                    ./gradlew clean || true
-                    rm -rf .gradle
-                    rm -rf ~/.gradle
-                    rm -rf ~/.npm
-                    rm -rf node_modules
-                    rm -rf /var/lib/jenkins/.npm
-                    rm -rf /var/lib/jenkins/.gradle
-                '''
-            }
-        }
-
         stage('Build') {
             steps {
                 echo 'Running build automation'
